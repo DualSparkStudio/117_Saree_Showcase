@@ -142,12 +142,9 @@ const Products = () => {
             </div>
           </div>
 
-          <div className="products-content">
-            <motion.aside
+          <div className={`products-content ${isFilterOpen ? 'filters-open' : ''}`}>
+            <aside
               className={`products-filters ${isFilterOpen ? 'open' : ''}`}
-              initial={{ x: '-100%' }}
-              animate={{ x: isFilterOpen ? 0 : '-100%' }}
-              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             >
               <div className="filters-header">
                 <h3>Filters</h3>
@@ -223,7 +220,16 @@ const Products = () => {
               <button className="clear-filters" onClick={clearFilters}>
                 Clear All Filters
               </button>
-            </motion.aside>
+            </aside>
+
+            {/* Overlay to close filters on mobile */}
+            {isFilterOpen && (
+              <div
+                className="filters-overlay"
+                onClick={() => setIsFilterOpen(false)}
+                aria-hidden="true"
+              />
+            )}
 
             <div className="products-grid-wrapper">
               {filteredProducts.length > 0 ? (

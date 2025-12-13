@@ -94,6 +94,8 @@
   display: flex;
   gap: var(--spacing-lg);
   position: relative;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .products-filters {
@@ -104,6 +106,7 @@
   height: fit-content;
   position: sticky;
   top: 100px;
+  flex-shrink: 0;
 }
 
 .filters-header {
@@ -176,6 +179,34 @@
 
 .products-grid-wrapper {
   flex: 1;
+  min-width: 0;
+}
+
+.filters-overlay {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .filters-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .products-grid {
@@ -224,16 +255,46 @@
   .products-filters {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
     height: 100vh;
     overflow-y: auto;
     z-index: 1001;
     width: 320px;
-    max-width: 90vw;
+    max-width: 85vw;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 80px;
+  }
+
+  .products-filters.open {
+    left: 0;
   }
 
   .close-filters {
     display: block;
+  }
+
+  .products-content::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .products-content.filters-open::before {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .products-grid-wrapper {
+    width: 100%;
   }
 
   .products-grid.grid {
