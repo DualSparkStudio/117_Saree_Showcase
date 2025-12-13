@@ -68,13 +68,14 @@
 }
 
 .stat-card {
-  background: #ffffff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
+  padding: 1.75rem;
+  border-radius: 16px;
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 .stat-card::before {
@@ -90,8 +91,9 @@
 }
 
 .stat-card:hover {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(109, 27, 45, 0.2);
 }
 
 .stat-card:hover::before {
@@ -118,13 +120,19 @@
 }
 
 .stat-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card:hover .stat-icon {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .stat-icon.gold {
@@ -183,11 +191,15 @@
 
 .stat-value {
   font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1e293b;
+  font-size: 2.25rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 0.25rem;
   line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .stat-description {
@@ -205,10 +217,17 @@
 }
 
 .admin-section {
-  background: #ffffff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.admin-section:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 
 .section-header {
@@ -220,10 +239,14 @@
 
 .section-title {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #1e293b;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e293b 0%, var(--primary-maroon) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin: 0;
+  letter-spacing: -0.3px;
 }
 
 .section-link {
@@ -269,21 +292,41 @@
   display: flex;
   align-items: flex-end;
   gap: 0.75rem;
-  height: 200px;
+  height: 220px;
   padding: 1rem 0;
-  border-bottom: 2px solid #e5e7eb;
+  border-bottom: 2px solid rgba(229, 231, 235, 0.5);
 }
 
 .chart-bar {
   flex: 1;
-  background: linear-gradient(180deg, var(--primary-maroon) 0%, var(--primary-gold) 100%);
-  border-radius: 4px 4px 0 0;
+  background: linear-gradient(180deg, var(--primary-maroon) 0%, #8b2635 50%, var(--primary-gold) 100%);
+  border-radius: 6px 6px 0 0;
   min-height: 20px;
-  transition: opacity 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-shadow: 0 -4px 12px rgba(109, 27, 45, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.chart-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
 }
 
 .chart-bar:hover {
-  opacity: 0.8;
+  transform: scaleY(1.05);
+  box-shadow: 0 -6px 16px rgba(109, 27, 45, 0.3);
+}
+
+.chart-bar:hover::before {
+  left: 100%;
 }
 
 .chart-labels {
@@ -337,8 +380,13 @@
   font-size: 0.9rem;
 }
 
+.orders-table tbody tr {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .orders-table tbody tr:hover {
-  background: #f8fafc;
+  background: linear-gradient(90deg, rgba(248, 250, 252, 0.8) 0%, #f8fafc 100%);
+  transform: translateX(2px);
 }
 
 .orders-table tbody tr:last-child td {
@@ -351,13 +399,20 @@
 }
 
 .status-badge {
-  padding: 0.4rem 0.875rem;
-  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   display: inline-block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.status-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .status-badge.delivered {
