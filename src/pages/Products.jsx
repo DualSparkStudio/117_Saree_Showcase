@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { FiFilter, FiX, FiGrid, FiList } from 'react-icons/fi'
+import { FiFilter, FiX } from 'react-icons/fi'
 import { products, getProductsByCategory } from '../data/products'
 import ProductCard from '../components/ProductCard'
 import './Products.css'
@@ -9,7 +9,6 @@ import './Products.css'
 const Products = () => {
   const [searchParams] = useSearchParams()
   const [isFilterOpen, setIsFilterOpen] = useState(false)
-  const [viewMode, setViewMode] = useState('grid')
   const [filters, setFilters] = useState({
     category: searchParams.get('category') || '',
     priceRange: '',
@@ -112,33 +111,24 @@ const Products = () => {
             >
               <FiFilter /> Filters
             </button>
-            <div className="view-toggle">
-              <button
-                className={viewMode === 'grid' ? 'active' : ''}
-                onClick={() => setViewMode('grid')}
-              >
-                <FiGrid />
-              </button>
-              <button
-                className={viewMode === 'list' ? 'active' : ''}
-                onClick={() => setViewMode('list')}
-              >
-                <FiList />
-              </button>
-            </div>
-            <div className="sort-select">
-              <select
-                value={filters.sort}
-                onChange={(e) => handleFilterChange('sort', e.target.value)}
-              >
-                <option value="default">Default</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="newest">Newest First</option>
-              </select>
-            </div>
-            <div className="products-count">
-              {filteredProducts.length} Products
+            <div className="toolbar-right">
+              <div className="products-count">
+                <span className="count-number">{filteredProducts.length}</span>
+                <span className="count-label">Products</span>
+              </div>
+              <div className="sort-select">
+                <label htmlFor="sort-select">Sort:</label>
+                <select
+                  id="sort-select"
+                  value={filters.sort}
+                  onChange={(e) => handleFilterChange('sort', e.target.value)}
+                >
+                  <option value="default">Default</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="newest">Newest First</option>
+                </select>
+              </div>
             </div>
           </div>
 
@@ -233,7 +223,7 @@ const Products = () => {
 
             <div className="products-grid-wrapper">
               {filteredProducts.length > 0 ? (
-                <div className={`products-grid ${viewMode}`}>
+                <div className="products-grid grid">
                   {filteredProducts.map((product, index) => (
                     <ProductCard key={product.id} product={product} index={index} />
                   ))}
