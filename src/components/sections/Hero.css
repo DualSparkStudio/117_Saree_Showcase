@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin-top: 70px;
 }
 
 .hero-background {
@@ -127,10 +128,17 @@
   }
 }
 
+@media (max-width: 992px) {
+  .hero-section {
+    margin-top: 70px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-section {
     height: 90vh;
     min-height: 500px;
+    margin-top: 60px;
   }
 
   .hero-cta {
@@ -141,6 +149,10 @@
   .hero-cta .btn-premium {
     width: 100%;
     max-width: 300px;
+  }
+
+  .hero-content {
+    padding: var(--spacing-md) var(--spacing-sm);
   }
 }
 

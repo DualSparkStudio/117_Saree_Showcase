@@ -166,6 +166,31 @@
   color: var(--primary-gold);
 }
 
+.footer-credit {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-credit p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.credit-link {
+  color: var(--primary-gold);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.credit-link:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
 .whatsapp-cta {
   position: fixed;
   bottom: var(--spacing-md);

@@ -78,6 +78,15 @@ const Footer = () => {
             <a href="#">Terms of Service</a>
           </div>
         </div>
+        
+        <div className="footer-credit">
+          <p>
+            Designed & Developed by{' '}
+            <a href="https://dualsparkstudio.com" target="_blank" rel="noopener noreferrer" className="credit-link">
+              DualSpark Studio
+            </a>
+          </p>
+        </div>
       </div>
 
       {/* WhatsApp CTA */}

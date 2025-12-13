@@ -13,10 +13,22 @@
   text-align: center;
 }
 
+@media (max-width: 992px) {
+  .featured-products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .featured-products-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-products-grid {
+    grid-template-columns: 1fr;
   }
 }
 

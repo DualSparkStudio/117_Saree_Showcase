@@ -95,6 +95,12 @@
   line-height: 1.8;
 }
 
+@media (max-width: 992px) {
+  .offers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .offers-grid {
     grid-template-columns: 1fr;
@@ -110,6 +116,24 @@
 
   .offer-subtitle {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .offer-card {
+    min-height: 350px;
+  }
+
+  .offer-content {
+    padding: var(--spacing-md);
+  }
+
+  .offer-title {
+    font-size: 1.3rem;
+  }
+
+  .offer-subtitle {
+    font-size: 1.8rem;
   }
 }
 

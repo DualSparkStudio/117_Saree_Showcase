@@ -1,5 +1,5 @@
 .product-detail-page {
-  padding-top: 100px;
+  padding-top: 90px;
   padding-bottom: var(--spacing-xl);
   min-height: 100vh;
 }
@@ -320,12 +320,43 @@
 }
 
 @media (max-width: 768px) {
+  .product-detail-page {
+    padding-top: 80px;
+  }
+
+  .product-detail-content {
+    gap: var(--spacing-md);
+  }
+
   .price-current {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .product-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+
+  .product-thumbnails {
+    gap: var(--spacing-xs);
+  }
+
+  .thumbnail {
+    min-width: 80px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-page {
+    padding-top: 70px;
+  }
+
+  .price-current {
+    font-size: 1.5rem;
+  }
+
+  .product-title {
+    font-size: 1.4rem;
   }
 }
 

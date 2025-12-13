@@ -110,6 +110,13 @@
   transform: translateX(5px);
 }
 
+@media (max-width: 992px) {
+  .categories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+  }
+}
+
 @media (max-width: 768px) {
   .categories-grid {
     grid-template-columns: 1fr;
@@ -118,6 +125,20 @@
 
   .category-card {
     height: 300px;
+  }
+
+  .section-header {
+    margin-bottom: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .category-card {
+    height: 250px;
+  }
+
+  .category-name {
+    font-size: 1.2rem;
   }
 }
 

@@ -238,13 +238,31 @@ html.lenis {
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+  .container-custom {
+    padding: 0 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .section-padding {
     padding: var(--spacing-lg) 0;
   }
   
   .container-custom {
-    padding: 0 var(--spacing-sm);
+    padding: 0 1rem;
+  }
+
+  :root {
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-custom {
+    padding: 0 0.75rem;
   }
 }
 
