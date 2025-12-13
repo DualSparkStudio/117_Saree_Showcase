@@ -1,0 +1,22 @@
+.featured-section {
+  background: var(--bg-ivory);
+}
+
+.featured-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.featured-cta {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .featured-products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+  }
+}
+

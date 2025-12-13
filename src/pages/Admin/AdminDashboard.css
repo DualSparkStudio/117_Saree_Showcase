@@ -1,0 +1,122 @@
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-ivory);
+  padding-top: 0;
+}
+
+.admin-sidebar {
+  width: 280px;
+  background: var(--white);
+  border-right: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.admin-logo {
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-logo h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--primary-maroon);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.admin-badge {
+  padding: 0.3rem 0.8rem;
+  background: var(--primary-gold);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-nav {
+  flex: 1;
+  padding: var(--spacing-md) 0;
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  color: var(--text-dark);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+  border-left: 3px solid transparent;
+}
+
+.admin-nav-item:hover {
+  background: var(--bg-ivory);
+  color: var(--primary-maroon);
+}
+
+.admin-nav-item.active {
+  background: var(--bg-ivory);
+  color: var(--primary-maroon);
+  border-left-color: var(--primary-gold);
+  font-weight: 600;
+}
+
+.admin-nav-item svg {
+  font-size: 1.2rem;
+}
+
+.admin-footer {
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--border-light);
+}
+
+.admin-main {
+  flex: 1;
+  margin-left: 280px;
+  padding: var(--spacing-xl);
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .admin-nav {
+    display: flex;
+    overflow-x: auto;
+    padding: var(--spacing-sm) 0;
+  }
+
+  .admin-nav-item {
+    white-space: nowrap;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .admin-nav-item.active {
+    border-left: none;
+    border-bottom-color: var(--primary-gold);
+  }
+
+  .admin-main {
+    margin-left: 0;
+    padding: var(--spacing-md);
+  }
+}
+

@@ -1,0 +1,224 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  padding: var(--spacing-sm) 0;
+  z-index: 1000;
+  transition: var(--transition-smooth);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.navbar-scrolled {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px var(--shadow-soft);
+  padding: var(--spacing-xs) 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  text-decoration: none;
+}
+
+.navbar-logo h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--primary-maroon);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.navbar-link {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-black);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: var(--transition-fast);
+  letter-spacing: 0.5px;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-gold);
+  transition: var(--transition-smooth);
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+  width: 100%;
+}
+
+.navbar-link:hover {
+  color: var(--primary-maroon);
+}
+
+.categories-link {
+  cursor: pointer;
+  position: relative;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  box-shadow: 0 10px 40px var(--shadow-medium);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.mega-menu-item {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  text-decoration: none;
+  color: var(--text-black);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+  border-left: 3px solid transparent;
+}
+
+.mega-menu-item:hover {
+  border-left-color: var(--primary-gold);
+  padding-left: var(--spacing-md);
+  color: var(--primary-maroon);
+}
+
+.navbar-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.navbar-icon {
+  font-size: 1.3rem;
+  color: var(--text-black);
+  text-decoration: none;
+  position: relative;
+  transition: var(--transition-fast);
+}
+
+.navbar-icon:hover {
+  color: var(--primary-maroon);
+  transform: translateY(-2px);
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--primary-gold);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 600;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-black);
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: var(--white);
+  padding: var(--spacing-md);
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.mobile-menu-link {
+  display: block;
+  padding: var(--spacing-sm);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-black);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-light);
+  transition: var(--transition-fast);
+}
+
+.mobile-menu-link:hover {
+  color: var(--primary-maroon);
+  padding-left: var(--spacing-md);
+}
+
+.mobile-menu-categories {
+  margin-top: var(--spacing-md);
+}
+
+.mobile-menu-category-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--primary-maroon);
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+@media (max-width: 992px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-logo h2 {
+    font-size: 1.2rem;
+  }
+
+  .navbar-icon {
+    font-size: 1.1rem;
+  }
+
+  .navbar-actions {
+    gap: var(--spacing-sm);
+  }
+}
+
