@@ -5,27 +5,27 @@ import './Instagram.css'
 const Instagram = () => {
   const instagramPosts = [
     {
-      image: 'https://images.unsplash.com/photo-1583912267550-c5289c0e724e?w=600&q=80',
+      image: 'https://images.pexels.com/photos/34481840/pexels-photo-34481840.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       id: 1,
     },
     {
-      image: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=600&q=80',
+      image: 'https://images.pexels.com/photos/34107842/pexels-photo-34107842.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       id: 2,
     },
     {
-      image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&q=80',
+      image: 'https://images.pexels.com/photos/33350574/pexels-photo-33350574.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       id: 3,
     },
     {
-      image: 'https://images.unsplash.com/photo-1566479179817-7d8b3e1e0c94?w=600&q=80',
+      image: 'https://images.pexels.com/photos/34673465/pexels-photo-34673465.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       id: 4,
     },
     {
-      image: 'https://images.unsplash.com/photo-1583912267550-c5289c0e724e?w=600&q=80',
+      image: 'https://images.pexels.com/photos/33729217/pexels-photo-33729217.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       id: 5,
     },
     {
-      image: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=600&q=80',
+      image: 'https://images.pexels.com/photos/34481840/pexels-photo-34481840.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       id: 6,
     },
   ]

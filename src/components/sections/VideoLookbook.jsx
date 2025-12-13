@@ -6,19 +6,11 @@ const VideoLookbook = () => {
   return (
     <section className="video-lookbook-section">
       <div className="video-wrapper">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="lookbook-video"
-          poster="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=1920&q=80"
-        >
-          <source
-            src="https://videos.pexels.com/video-files/3044158/3044158-hd_1920_1080_24fps.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <img
+          src="https://images.pexels.com/photos/34107842/pexels-photo-34107842.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+          alt="Indian Traditional Saree Lookbook"
+          className="lookbook-image"
+        />
         <div className="video-overlay"></div>
         <motion.div
           className="video-content"

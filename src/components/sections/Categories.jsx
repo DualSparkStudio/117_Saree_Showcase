@@ -7,32 +7,32 @@ const Categories = () => {
   const categories = [
     {
       name: 'Silk Sarees',
-      image: 'https://images.unsplash.com/photo-1583912267550-c5289c0e724e?w=600&q=80',
+      image: 'https://images.pexels.com/photos/34481840/pexels-photo-34481840.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
       path: '/products?category=silk',
     },
     {
       name: 'Banarasi',
-      image: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=600&q=80',
+      image: 'https://images.pexels.com/photos/34107842/pexels-photo-34107842.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
       path: '/products?category=banarasi',
     },
     {
       name: 'Kanjivaram',
-      image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&q=80',
+      image: 'https://images.pexels.com/photos/34673465/pexels-photo-34673465.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
       path: '/products?category=kanjivaram',
     },
     {
       name: 'Designer Sarees',
-      image: 'https://images.unsplash.com/photo-1566479179817-7d8b3e1e0c94?w=600&q=80',
+      image: 'https://images.pexels.com/photos/33350574/pexels-photo-33350574.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
       path: '/products?category=designer',
     },
     {
       name: 'Wedding Sarees',
-      image: 'https://images.unsplash.com/photo-1583912267550-c5289c0e724e?w=600&q=80',
+      image: 'https://images.pexels.com/photos/34673465/pexels-photo-34673465.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
       path: '/products?category=wedding',
     },
     {
       name: 'Party Wear',
-      image: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=600&q=80',
+      image: 'https://images.pexels.com/photos/33729217/pexels-photo-33729217.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
       path: '/products?category=party',
     },
   ]

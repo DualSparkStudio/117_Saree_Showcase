@@ -61,19 +61,11 @@ const Hero = () => {
     <section ref={heroRef} className="hero-section">
       <div className="hero-background">
         <div className="hero-overlay"></div>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="hero-video"
-          poster="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=1920&q=80"
-        >
-          <source
-            src="https://videos.pexels.com/video-files/3044158/3044158-hd_1920_1080_24fps.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <img
+          src="https://images.pexels.com/photos/34481840/pexels-photo-34481840.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+          alt="Traditional Indian Saree"
+          className="hero-image"
+        />
       </div>
 
       <div className="hero-content container-custom">
