@@ -15,6 +15,8 @@ import ProductDetail from './pages/ProductDetail'
 import Cart from './pages/Cart'
 import Wishlist from './pages/Wishlist'
 import Checkout from './pages/Checkout'
+import About from './pages/About'
+import Contact from './pages/Contact'
 import AdminDashboard from './pages/Admin/AdminDashboard'
 
 // Context
@@ -63,6 +65,8 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/wishlist" element={<Wishlist />} />
                 <Route path="/checkout" element={<Checkout />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/admin/*" element={<AdminDashboard />} />
               </Routes>
             </AnimatePresence>

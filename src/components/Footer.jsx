@@ -38,14 +38,14 @@ const Footer = () => {
               <li><Link to="/products">Collections</Link></li>
               <li><Link to="/products?category=wedding">Wedding Sarees</Link></li>
               <li><Link to="/products?category=designer">Designer Sarees</Link></li>
-              <li><Link to="/#about">About Us</Link></li>
+              <li><Link to="/about">About Us</Link></li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h4 className="footer-title">Customer Care</h4>
             <ul className="footer-links">
-              <li><Link to="/#contact">Contact Us</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
               <li><a href="#">Shipping Policy</a></li>
               <li><a href="#">Returns & Exchange</a></li>
               <li><a href="#">Size Guide</a></li>
