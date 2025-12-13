@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import Lenis from '@studio-freight/lenis'
 
@@ -23,7 +23,10 @@ import AdminDashboard from './pages/Admin/AdminDashboard'
 import { CartProvider } from './context/CartContext'
 import { WishlistProvider } from './context/WishlistContext'
 
-function App() {
+function AppContent() {
+  const location = useLocation()
+  const isAdminRoute = location.pathname.startsWith('/admin')
+
   useEffect(() => {
     // Initialize Lenis smooth scrolling
     const lenis = new Lenis({
@@ -51,27 +54,33 @@ function App() {
   }, [])
 
   return (
+    <div className="App">
+      {!isAdminRoute && <Preloader />}
+      {!isAdminRoute && <Navbar />}
+      <AnimatePresence mode="wait">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/admin/*" element={<AdminDashboard />} />
+        </Routes>
+      </AnimatePresence>
+      {!isAdminRoute && <Footer />}
+    </div>
+  )
+}
+
+function App() {
+  return (
     <CartProvider>
       <WishlistProvider>
         <Router>
-          <div className="App">
-            <Preloader />
-            <Navbar />
-            <AnimatePresence mode="wait">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/products" element={<Products />} />
-                <Route path="/product/:id" element={<ProductDetail />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/wishlist" element={<Wishlist />} />
-                <Route path="/checkout" element={<Checkout />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/admin/*" element={<AdminDashboard />} />
-              </Routes>
-            </AnimatePresence>
-            <Footer />
-          </div>
+          <AppContent />
         </Router>
       </WishlistProvider>
     </CartProvider>
