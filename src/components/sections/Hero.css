@@ -7,7 +7,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-top: 70px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .hero-background {
@@ -45,6 +46,7 @@
   text-align: center;
   color: var(--white);
   padding: var(--spacing-xl) var(--spacing-md);
+  margin-top: 70px;
 }
 
 .hero-title {
@@ -130,8 +132,12 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    height: calc(100vh - 60px);
-    min-height: calc(500px - 60px);
+    height: 100vh;
+    min-height: 500px;
+  }
+
+  .hero-content {
+    padding: var(--spacing-md) var(--spacing-sm);
     margin-top: 60px;
   }
 
@@ -143,10 +149,6 @@
   .hero-cta .btn-premium {
     width: 100%;
     max-width: 300px;
-  }
-
-  .hero-content {
-    padding: var(--spacing-md) var(--spacing-sm);
   }
 }
 
