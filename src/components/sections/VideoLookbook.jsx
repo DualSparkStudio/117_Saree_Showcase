@@ -7,7 +7,7 @@ const VideoLookbook = () => {
     <section className="video-lookbook-section">
       <div className="video-wrapper">
         <img
-          src="https://images.pexels.com/photos/34107842/pexels-photo-34107842.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+          src="https://images.pexels.com/photos/35108855/pexels-photo-35108855.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
           alt="Indian Traditional Saree Lookbook"
           className="lookbook-image"
         />

@@ -62,7 +62,7 @@ const Hero = () => {
       <div className="hero-background">
         <div className="hero-overlay"></div>
         <img
-          src="https://images.pexels.com/photos/34481840/pexels-photo-34481840.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+          src="https://images.pexels.com/photos/9419149/pexels-photo-9419149.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
           alt="Traditional Indian Saree"
           className="hero-image"
         />

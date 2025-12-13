@@ -7,32 +7,32 @@ const Categories = () => {
   const categories = [
     {
       name: 'Silk Sarees',
-      image: 'https://images.pexels.com/photos/34481840/pexels-photo-34481840.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
+      image: 'https://images.pexels.com/photos/2531734/pexels-photo-2531734.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
       path: '/products?category=silk',
     },
     {
       name: 'Banarasi',
-      image: 'https://images.pexels.com/photos/34107842/pexels-photo-34107842.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
+      image: 'https://images.pexels.com/photos/2723623/pexels-photo-2723623.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
       path: '/products?category=banarasi',
     },
     {
       name: 'Kanjivaram',
-      image: 'https://images.pexels.com/photos/34673465/pexels-photo-34673465.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
+      image: 'https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
       path: '/products?category=kanjivaram',
     },
     {
       name: 'Designer Sarees',
-      image: 'https://images.pexels.com/photos/33350574/pexels-photo-33350574.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
+      image: 'https://images.pexels.com/photos/9418783/pexels-photo-9418783.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
       path: '/products?category=designer',
     },
     {
       name: 'Wedding Sarees',
-      image: 'https://images.pexels.com/photos/34673465/pexels-photo-34673465.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
+      image: 'https://images.pexels.com/photos/35108779/pexels-photo-35108779.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
       path: '/products?category=wedding',
     },
     {
       name: 'Party Wear',
-      image: 'https://images.pexels.com/photos/33729217/pexels-photo-33729217.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
+      image: 'https://images.pexels.com/photos/35108861/pexels-photo-35108861.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop',
       path: '/products?category=party',
     },
   ]

@@ -5,27 +5,27 @@ import './Instagram.css'
 const Instagram = () => {
   const instagramPosts = [
     {
-      image: 'https://images.pexels.com/photos/34481840/pexels-photo-34481840.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+      image: 'https://images.pexels.com/photos/2531734/pexels-photo-2531734.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       id: 1,
     },
     {
-      image: 'https://images.pexels.com/photos/34107842/pexels-photo-34107842.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+      image: 'https://images.pexels.com/photos/2723623/pexels-photo-2723623.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       id: 2,
     },
     {
-      image: 'https://images.pexels.com/photos/33350574/pexels-photo-33350574.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+      image: 'https://images.pexels.com/photos/1162983/pexels-photo-1162983.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       id: 3,
     },
     {
-      image: 'https://images.pexels.com/photos/34673465/pexels-photo-34673465.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+      image: 'https://images.pexels.com/photos/9419149/pexels-photo-9419149.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       id: 4,
     },
     {
-      image: 'https://images.pexels.com/photos/33729217/pexels-photo-33729217.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+      image: 'https://images.pexels.com/photos/35108779/pexels-photo-35108779.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       id: 5,
     },
     {
-      image: 'https://images.pexels.com/photos/34481840/pexels-photo-34481840.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+      image: 'https://images.pexels.com/photos/25655890/pexels-photo-25655890.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       id: 6,
     },
   ]
