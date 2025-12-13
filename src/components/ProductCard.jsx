@@ -29,6 +29,9 @@ const ProductCard = ({ product, index = 0 }) => {
     ? Math.round(((product.price - product.discountedPrice) / product.price) * 100)
     : 0
 
+  // Show BESTSELLER for popular products or products with high sales
+  const isBestseller = product.isNew || discountPercentage > 15
+
   return (
     <motion.div
       className="product-card premium-card"
@@ -45,9 +48,16 @@ const ProductCard = ({ product, index = 0 }) => {
             className="product-card-image"
             loading="lazy"
           />
-          {product.isNew && <span className="product-badge new">New</span>}
+          {isBestseller && (
+            <div className="product-badge-bestseller">
+              <span>BESTSELLER</span>
+            </div>
+          )}
           {discountPercentage > 0 && (
-            <span className="product-badge discount">-{discountPercentage}%</span>
+            <div className="product-badge-discount">
+              <div className="discount-line">-{discountPercentage}%</div>
+              <div className="discount-line">OFF</div>
+            </div>
           )}
           {!product.inStock && (
             <div className="product-overlay out-of-stock">

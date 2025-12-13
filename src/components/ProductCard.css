@@ -37,26 +37,61 @@
   transform: scale(1.1);
 }
 
-.product-badge {
+/* Bestseller Badge - Top Left */
+.product-badge-bestseller {
   position: absolute;
-  top: var(--spacing-xs);
-  left: var(--spacing-xs);
-  padding: 0.3rem 0.8rem;
-  font-size: 0.75rem;
-  font-weight: 600;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: linear-gradient(135deg, #ff8c42 0%, #ff7849 100%);
+  color: var(--white);
+  padding: 0.75rem 1.5rem 0.75rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  z-index: 2;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.4);
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%);
 }
 
-.product-badge.new {
-  background: var(--primary-gold);
-  color: var(--white);
+.product-badge-bestseller span {
+  display: block;
+  line-height: 1;
 }
 
-.product-badge.discount {
-  background: var(--primary-maroon);
+/* Discount Badge - Top Right */
+.product-badge-discount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
   color: var(--white);
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.2;
+  box-shadow: 0 4px 16px rgba(220, 38, 38, 0.5);
+  clip-path: polygon(12px 0, 100% 0, 100% 100%, 0 100%, 0 12px);
+  min-width: 70px;
+}
+
+.discount-line {
+  display: block;
+  white-space: nowrap;
+  letter-spacing: 0.8px;
+}
+
+.discount-line:first-child {
+  font-size: 1.05rem;
+  margin-bottom: 0.1rem;
+}
+
+.discount-line:last-child {
+  font-size: 0.7rem;
+  font-weight: 600;
+  opacity: 0.95;
 }
 
 .product-overlay {
@@ -172,6 +207,25 @@
 }
 
 @media (max-width: 768px) {
+  .product-badge-bestseller {
+    padding: 0.6rem 1.2rem 0.6rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .product-badge-discount {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.85rem;
+    min-width: 60px;
+  }
+
+  .discount-line:first-child {
+    font-size: 0.95rem;
+  }
+
+  .discount-line:last-child {
+    font-size: 0.65rem;
+  }
+
   .product-card-overlay {
     opacity: 1;
     background: rgba(0, 0, 0, 0.3);
