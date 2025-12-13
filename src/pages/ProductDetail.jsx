@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
-import { FiHeart, FiShoppingBag, FiMinus, FiPlus, FiArrowLeft } from 'react-icons/fi'
+import { FiHeart, FiShoppingBag, FiMinus, FiPlus, FiArrowLeft, FiZoomIn } from 'react-icons/fi'
 import { useCart } from '../context/CartContext'
 import { useWishlist } from '../context/WishlistContext'
 import { getProductById } from '../data/products'
@@ -66,15 +65,25 @@ const ProductDetail = () => {
         <div className="product-detail-content">
           <div className="product-images">
             <div className="product-main-image">
-              <TransformWrapper>
-                <TransformComponent>
-                  <img
-                    src={images[selectedImage]}
-                    alt={product.name}
-                    className="main-image"
-                  />
-                </TransformComponent>
-              </TransformWrapper>
+              <div className="image-zoom-container">
+                <img
+                  src={images[selectedImage]}
+                  alt={product.name}
+                  className="main-image"
+                  onClick={(e) => {
+                    if (e.target.style.transform === 'scale(2)') {
+                      e.target.style.transform = 'scale(1)'
+                      e.target.style.cursor = 'zoom-in'
+                    } else {
+                      e.target.style.transform = 'scale(2)'
+                      e.target.style.cursor = 'zoom-out'
+                    }
+                  }}
+                />
+                <div className="zoom-hint">
+                  <FiZoomIn /> Click to zoom
+                </div>
+              </div>
             </div>
             {images.length > 1 && (
               <div className="product-thumbnails">
