@@ -215,8 +215,132 @@
 }
 
 @media (max-width: 768px) {
+  .checkout-page {
+    padding-top: 80px;
+  }
+
+  .checkout-title {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .checkout-form-section {
+    padding: var(--spacing-md);
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
   .form-row {
     grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .form-group {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .coupon-section {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+  }
+
+  .coupon-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .coupon-input-group {
+    flex-direction: column;
+  }
+
+  .coupon-input-group input {
+    width: 100%;
+  }
+
+  .checkout-summary {
+    padding: var(--spacing-md);
+  }
+
+  .summary-title {
+    font-size: 1.3rem;
+  }
+
+  .order-item-info img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .order-item-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .order-item-info p {
+    font-size: 0.8rem;
+  }
+
+  .summary-row {
+    font-size: 0.9rem;
+  }
+
+  .summary-row.total {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-page {
+    padding-top: 70px;
+  }
+
+  .checkout-title {
+    font-size: 1.5rem;
+  }
+
+  .checkout-form-section {
+    padding: var(--spacing-sm);
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .form-group label {
+    font-size: 0.8rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .checkout-summary {
+    padding: var(--spacing-sm);
+  }
+
+  .summary-title {
+    font-size: 1.1rem;
+  }
+
+  .order-item-info img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .summary-row.total {
+    font-size: 1.2rem;
   }
 }
 

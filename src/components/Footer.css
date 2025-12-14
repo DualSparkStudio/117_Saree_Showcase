@@ -216,14 +216,69 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
 
+  .footer-logo {
+    font-size: 1.5rem;
+  }
+
+  .footer-title {
+    font-size: 1.1rem;
+  }
+
+  .footer-description {
+    font-size: 0.85rem;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .newsletter-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .newsletter-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+  }
+
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    gap: var(--spacing-xs);
+  }
+
+  .footer-bottom p {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom-links {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .footer-bottom-links a {
+    font-size: 0.85rem;
+  }
+
+  .footer-credit p {
+    font-size: 0.8rem;
   }
 
   .whatsapp-cta {
@@ -232,6 +287,66 @@
     font-size: 1.5rem;
     bottom: var(--spacing-sm);
     right: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: var(--spacing-md) 0 var(--spacing-sm);
+  }
+
+  .footer-content {
+    gap: var(--spacing-sm);
+  }
+
+  .footer-logo {
+    font-size: 1.3rem;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .footer-description {
+    font-size: 0.8rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .footer-links li {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+  }
+
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .newsletter-input {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .newsletter-button {
+    padding: 0.7rem;
+    font-size: 1rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom-links a {
+    font-size: 0.8rem;
+  }
+
+  .footer-credit p {
+    font-size: 0.75rem;
   }
 }
 

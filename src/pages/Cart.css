@@ -263,11 +263,17 @@
     padding-top: 80px;
   }
 
+  .cart-title {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
   .cart-item {
     grid-template-columns: 100px 1fr;
     grid-template-rows: auto auto auto;
     padding: var(--spacing-sm);
     gap: var(--spacing-sm);
+    position: relative;
   }
 
   .cart-item-image {
@@ -275,9 +281,32 @@
     height: 100px;
   }
 
+  .cart-item-name {
+    font-size: 1.1rem;
+  }
+
+  .cart-item-category {
+    font-size: 0.85rem;
+  }
+
+  .cart-item-price {
+    font-size: 1rem;
+  }
+
   .cart-item-quantity {
     grid-column: 1 / -1;
     justify-self: start;
+  }
+
+  .quantity-button {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
+  .quantity-value {
+    min-width: 40px;
+    font-size: 0.9rem;
   }
 
   .cart-item-total {
@@ -290,6 +319,25 @@
     position: absolute;
     top: var(--spacing-sm);
     right: var(--spacing-sm);
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .cart-summary {
+    padding: var(--spacing-md);
+  }
+
+  .summary-title {
+    font-size: 1.3rem;
+  }
+
+  .summary-row {
+    font-size: 0.9rem;
+  }
+
+  .summary-row.total {
+    font-size: 1.3rem;
   }
 }
 
@@ -298,8 +346,15 @@
     padding-top: 70px;
   }
 
+  .cart-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+  }
+
   .cart-item {
     grid-template-columns: 80px 1fr;
+    padding: var(--spacing-xs);
+    gap: var(--spacing-xs);
   }
 
   .cart-item-image {
@@ -308,7 +363,52 @@
   }
 
   .cart-item-name {
+    font-size: 0.95rem;
+  }
+
+  .cart-item-category {
+    font-size: 0.8rem;
+  }
+
+  .cart-item-price {
+    font-size: 0.9rem;
+  }
+
+  .quantity-button {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+
+  .quantity-value {
+    min-width: 35px;
+    font-size: 0.85rem;
+  }
+
+  .cart-item-total {
     font-size: 1rem;
+  }
+
+  .remove-item-button {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+
+  .cart-summary {
+    padding: var(--spacing-sm);
+  }
+
+  .summary-title {
+    font-size: 1.1rem;
+  }
+
+  .summary-row {
+    font-size: 0.85rem;
+  }
+
+  .summary-row.total {
+    font-size: 1.2rem;
   }
 }
 
