@@ -143,7 +143,6 @@ html.lenis {
   padding: 0 var(--spacing-md);
   width: 100%;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 .section-padding {

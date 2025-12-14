@@ -16,18 +16,12 @@
   display: grid;
   grid-template-columns: 1fr 500px;
   gap: var(--spacing-xl);
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 .checkout-form-section {
   background: var(--white);
   padding: var(--spacing-lg);
   border: 1px solid var(--border-light);
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 .section-title {
@@ -48,8 +42,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--spacing-md);
-  width: 100%;
-  max-width: 100%;
 }
 
 .form-group {
@@ -74,7 +66,6 @@
   outline: none;
   transition: var(--transition-fast);
   width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -99,8 +90,6 @@
 .coupon-input-group {
   display: flex;
   gap: var(--spacing-sm);
-  width: 100%;
-  max-width: 100%;
 }
 
 .coupon-input-group input {
@@ -110,8 +99,6 @@
   font-family: var(--font-body);
   font-size: 0.95rem;
   outline: none;
-  width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -221,23 +208,12 @@
 }
 
 @media (max-width: 992px) {
-  .checkout-page {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
   .checkout-content {
     grid-template-columns: 1fr;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
   }
 
   .checkout-summary {
     position: static;
-    width: 100%;
-    max-width: 100%;
   }
 }
 
@@ -253,6 +229,17 @@
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+  }
+
+  .checkout-form-section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .form-row {
+    width: 100%;
+    max-width: 100%;
   }
 
   .checkout-title {
@@ -347,6 +334,22 @@
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+  }
+
+  .checkout-form-section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .form-row {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .coupon-input-group {
+    width: 100%;
+    max-width: 100%;
   }
 
   .checkout-title {
