@@ -1,5 +1,13 @@
 .magnetic-button {
   transition: var(--transition-smooth);
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
 }
 
 

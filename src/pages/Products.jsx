@@ -17,6 +17,17 @@ const Products = () => {
     sort: 'default',
   })
 
+  // Update filters when URL searchParams change
+  useEffect(() => {
+    const categoryFromUrl = searchParams.get('category') || ''
+    if (categoryFromUrl !== filters.category) {
+      setFilters((prev) => ({
+        ...prev,
+        category: categoryFromUrl,
+      }))
+    }
+  }, [searchParams, filters.category])
+
   const categories = ['Silk', 'Banarasi', 'Kanjivaram', 'Designer', 'Wedding', 'Party']
   const fabrics = ['Pure Silk', 'Banarasi Silk', 'Kanjivaram Silk', 'Georgette']
   const occasions = ['Wedding', 'Party', 'Festival', 'Formal']

@@ -1,8 +1,11 @@
 import React, { useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import './MagneticButton.css'
 
-const MagneticButton = ({ children, className = '', ...props }) => {
+const MotionLink = motion(Link)
+
+const MagneticButton = ({ children, className = '', as, ...props }) => {
   const buttonRef = useRef(null)
 
   useEffect(() => {
@@ -30,15 +33,25 @@ const MagneticButton = ({ children, className = '', ...props }) => {
     }
   }, [])
 
+  const motionProps = {
+    ref: buttonRef,
+    className: `magnetic-button ${className}`,
+    whileHover: { scale: 1.05 },
+    whileTap: { scale: 0.95 },
+    transition: { type: 'spring', stiffness: 400, damping: 17 },
+  }
+
+  // If 'as' prop is Link, render MotionLink, otherwise render motion.button
+  if (as === Link) {
+    return (
+      <MotionLink {...motionProps} {...props}>
+        {children}
+      </MotionLink>
+    )
+  }
+
   return (
-    <motion.button
-      ref={buttonRef}
-      className={`magnetic-button ${className}`}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-      {...props}
-    >
+    <motion.button {...motionProps} {...props}>
       {children}
     </motion.button>
   )
