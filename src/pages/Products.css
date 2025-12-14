@@ -38,6 +38,9 @@
   border-radius: 4px;
   gap: var(--spacing-md);
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .filter-toggle {
@@ -56,6 +59,8 @@
   border-radius: 4px;
   letter-spacing: 0.3px;
   text-transform: uppercase;
+  z-index: 10;
+  position: relative;
 }
 
 .filter-toggle:hover {
@@ -134,6 +139,7 @@
   gap: var(--spacing-lg);
   position: relative;
   width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -219,25 +225,50 @@
 .products-grid-wrapper {
   flex: 1;
   min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .filters-overlay {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
 }
 
 @media (max-width: 992px) {
-  .filters-overlay {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    animation: fadeIn 0.3s ease;
+  .filter-toggle {
+    display: flex !important;
+    visibility: visible !important;
   }
-}
+
+  .filters-overlay {
+    display: block !important;
+  }
+
+  .products-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .products-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .products-toolbar {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 
 @keyframes fadeIn {
   from {
@@ -251,6 +282,8 @@
 .products-grid {
   display: grid;
   gap: var(--spacing-lg);
+  width: 100%;
+  max-width: 100%;
 }
 
 .products-grid.grid {
@@ -329,6 +362,15 @@
 @media (max-width: 768px) {
   .products-page {
     padding-top: 80px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .products-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .products-header h1 {
@@ -419,6 +461,15 @@
 @media (max-width: 480px) {
   .products-page {
     padding-top: 70px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .products-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .products-header h1 {

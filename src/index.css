@@ -142,6 +142,8 @@ html.lenis {
   margin: 0 auto;
   padding: 0 var(--spacing-md);
   width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .section-padding {

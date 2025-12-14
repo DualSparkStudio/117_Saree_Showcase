@@ -36,6 +36,9 @@
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: var(--spacing-xl);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .contact-info h2,
@@ -158,6 +161,9 @@
   padding: var(--spacing-lg);
   border: 1px solid var(--border-light);
   border-radius: 4px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .form-row {
@@ -165,6 +171,8 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-md);
   margin-bottom: var(--spacing-md);
+  width: 100%;
+  max-width: 100%;
 }
 
 .form-group {
@@ -194,6 +202,9 @@
   outline: none;
   transition: var(--transition-fast);
   border-radius: 4px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -253,6 +264,7 @@
 .map-container {
   position: relative;
   width: 100%;
+  max-width: 100%;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 40px var(--shadow-medium);
@@ -270,11 +282,29 @@
 @media (max-width: 768px) {
   .contact-page {
     padding-top: 80px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .contact-content {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .contact-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .contact-info,
   .contact-form {
     padding: var(--spacing-md);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .contact-info h2,
@@ -349,11 +379,29 @@
 @media (max-width: 480px) {
   .contact-page {
     padding-top: 70px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .contact-content {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .contact-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .contact-info,
   .contact-form {
     padding: var(--spacing-sm);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .contact-info h2,
