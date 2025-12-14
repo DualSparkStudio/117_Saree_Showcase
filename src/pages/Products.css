@@ -49,13 +49,37 @@
   font-weight: 500;
   font-size: 0.95rem;
   cursor: pointer;
-  display: flex;
+  display: none;
   align-items: center;
   gap: 0.5rem;
   transition: var(--transition-fast);
   border-radius: 4px;
   letter-spacing: 0.3px;
   text-transform: uppercase;
+}
+
+/* Desktop: Filter sidebar always visible, filter button hidden */
+@media (min-width: 993px) {
+  .filter-toggle {
+    display: none;
+  }
+
+  .products-filters {
+    display: block !important;
+    position: sticky;
+    top: 100px;
+    left: auto;
+    width: 280px;
+    height: fit-content;
+  }
+
+  .filters-overlay {
+    display: none !important;
+  }
+
+  .close-filters {
+    display: none;
+  }
 }
 
 .filter-toggle:hover {
@@ -231,53 +255,6 @@
   animation: fadeIn 0.3s ease;
 }
 
-@media (max-width: 992px) {
-  .filter-toggle {
-    display: flex !important;
-    visibility: visible !important;
-    z-index: 10;
-    position: relative;
-  }
-
-  .filters-overlay {
-    display: block !important;
-  }
-
-  .products-page {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  .products-container {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  .products-toolbar {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .products-content {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  .products-grid-wrapper {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  .products-grid {
-    width: 100%;
-    max-width: 100%;
-  }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -315,6 +292,17 @@
 }
 
 @media (max-width: 992px) {
+  .filter-toggle {
+    display: flex !important;
+    visibility: visible !important;
+    z-index: 10;
+    position: relative;
+  }
+
+  .filters-overlay {
+    display: block !important;
+  }
+
   .products-filters {
     position: fixed;
     top: 0;
@@ -356,8 +344,39 @@
     pointer-events: all;
   }
 
+  .products-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .products-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .products-toolbar {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .products-content {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .products-grid-wrapper {
     width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .products-grid {
+    width: 100%;
+    max-width: 100%;
   }
 
   .products-grid.grid {
