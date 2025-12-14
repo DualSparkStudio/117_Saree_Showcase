@@ -217,6 +217,33 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      <section className="contact-map section-padding">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="map-title">Find Us</h2>
+            <p className="map-subtitle">
+              Visit our store or reach out to us. We're here to help you find your perfect saree.
+            </p>
+            <div className="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241316.99371371176!2d72.74109950914576!3d19.0821978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce40ffcfcacd%3A0x5d71ff22760f8e77!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Our Location - Mumbai, Maharashtra, India"
+                className="map-iframe"
+              ></iframe>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   )
 }
