@@ -46,3 +46,4 @@ const MagneticButton = ({ children, className = '', ...props }) => {
 
 export default MagneticButton
 
+
