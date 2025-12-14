@@ -26,6 +26,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-lg);
+  width: 100%;
+  overflow: hidden;
 }
 
 .category-card {
