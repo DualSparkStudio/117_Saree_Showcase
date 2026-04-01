@@ -25,7 +25,7 @@
 
 /* Sidebar */
 .admin-sidebar {
-  width: 280px;
+  width: min(280px, 85vw);
   background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
   border-right: 1px solid rgba(229, 231, 235, 0.8);
   display: flex;
@@ -199,7 +199,7 @@
 /* Main Wrapper */
 .admin-main-wrapper {
   flex: 1;
-  margin-left: 280px;
+  margin-left: min(280px, 85vw);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -494,6 +494,7 @@
 @media (max-width: 768px) {
   .admin-sidebar {
     transform: translateX(-100%);
+    width: min(280px, 85vw);
   }
 
   .admin-sidebar.open {
@@ -534,5 +535,29 @@
 
   .admin-profile-info {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-header {
+    padding: 0.75rem;
+  }
+
+  .admin-main {
+    padding: 0.75rem;
+  }
+
+  .admin-logo h2 {
+    font-size: 1.2rem;
+  }
+
+  .admin-badge {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .admin-nav-item {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
   }
 }

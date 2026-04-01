@@ -14,7 +14,7 @@
 
 .checkout-content {
   display: grid;
-  grid-template-columns: 1fr 500px;
+  grid-template-columns: 1fr min(500px, 100%);
   gap: var(--spacing-xl);
 }
 
@@ -40,7 +40,7 @@
 
 .form-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: var(--spacing-md);
 }
 

@@ -514,7 +514,16 @@
   }
 
   .stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.25rem;
+  }
+
+  .stat-value {
+    font-size: 1.75rem;
   }
 
   .chart-bars {
@@ -526,12 +535,130 @@
     gap: 0.5rem;
   }
 
-  .orders-table {
+  /* Card-based orders table */
+  .orders-table table thead {
+    display: none;
+  }
+
+  .orders-table table tbody tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.75rem;
+    border-bottom: 1px solid #f1f5f9;
+    gap: 0.375rem 0.75rem;
+  }
+
+  .orders-table table td:nth-child(1) { grid-column: 1; grid-row: 1; }
+  .orders-table table td:nth-child(2) { grid-column: 1; grid-row: 2; }
+  .orders-table table td:nth-child(3) { grid-column: 2; grid-row: 1; text-align: right; }
+  .orders-table table td:nth-child(4) { grid-column: 2; grid-row: 2; text-align: right; }
+  .orders-table table td:nth-child(5) { grid-column: 1 / -1; grid-row: 3; }
+
+  .orders-table table td {
+    padding: 0;
     font-size: 0.85rem;
+  }
+
+  .admin-section {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .analytics-header {
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .admin-page-title {
+    font-size: 1.5rem;
+  }
+
+  .time-range-selector {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .time-range-selector button {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .stat-title {
+    font-size: 0.75rem;
+  }
+
+  .stat-description {
+    font-size: 0.75rem;
+  }
+
+  .chart-bars {
+    height: 120px;
+    gap: 0.3rem;
+  }
+
+  .chart-labels span {
+    font-size: 0.65rem;
+  }
+
+  .admin-section {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
   }
 
   .orders-table th,
   .orders-table td {
-    padding: 0.75rem 0.5rem;
+    padding: 0.625rem 0.375rem;
+    font-size: 0.8rem;
+  }
+
+  /* Hide less critical columns on very small screens */
+  .orders-table th:nth-child(5),
+  .orders-table td:nth-child(5) {
+    display: none;
+  }
+
+  .top-product-item {
+    padding: 0.75rem;
+  }
+
+  .product-rank {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+
+  .product-name {
+    font-size: 0.85rem;
+  }
+
+  .product-stats {
+    font-size: 0.75rem;
   }
 }

@@ -38,7 +38,7 @@
 
 .cart-content {
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: 1fr min(400px, 100%);
   gap: var(--spacing-xl);
 }
 

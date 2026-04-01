@@ -84,14 +84,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transform: translateY(20px);
-  opacity: 0;
+  transform: translateY(0);
+  opacity: 1;
   transition: var(--transition-smooth);
 }
 
-.category-card:hover .category-overlay {
-  transform: translateY(0);
-  opacity: 1;
+/* On hover-capable devices, animate the overlay */
+@media (hover: hover) {
+  .category-overlay {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  .category-card:hover .category-overlay {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .category-name {
