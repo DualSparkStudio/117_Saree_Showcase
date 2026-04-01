@@ -18,6 +18,7 @@ import {
 import AdminProducts from './AdminProducts'
 import AdminOrders from './AdminOrders'
 import AdminAnalytics from './AdminAnalytics'
+import AdminSettings from './AdminSettings'
 import './AdminDashboard.css'
 
 const AdminDashboard = () => {
@@ -137,7 +138,7 @@ const AdminDashboard = () => {
             <Route path="/products" element={<AdminProducts />} />
             <Route path="/orders" element={<AdminOrders />} />
             <Route path="/analytics" element={<AdminAnalytics />} />
-            <Route path="/settings" element={<div className="admin-placeholder"><h1>Settings</h1><p>Settings page coming soon...</p></div>} />
+            <Route path="/settings" element={<AdminSettings />} />
           </Routes>
         </main>
       </div>
